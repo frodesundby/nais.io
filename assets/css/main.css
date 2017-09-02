@@ -3136,10 +3136,14 @@
 				cursor: default;
 				display: inline-block;
 				font-size: 2em;
-				height: 2.25em;
-				line-height: 2.25em;
+				height: 3.25em;
+				line-height: 3.25em;
 				text-align: center;
-				width: 2.25em;
+				width: 3.25em;
+			}
+			#banner .inline {
+				display: inline-block;
+
 			}
 
 		#banner h2 {
@@ -3160,13 +3164,15 @@
 			-ms-filter: blur(0);
 			filter: blur(0);
 			opacity: 1;
-			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-			font-size: 2.25em;
-			margin-bottom: 0.8em;
-			padding-bottom: 0.4em;
+			font-size: 3.25em;
+			padding-top: 0.2em;
+			vertical-align: top;
+			padding-left: 30px;
 		}
 
 		#banner p {
+			border-top: solid 2px rgba(255, 255, 255, 0.125);
+			padding-top: 10px;
 			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, -moz-filter 0.25s ease;
 			-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease, -webkit-filter 0.25s ease;
 			-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease, -ms-filter 0.25s ease;
@@ -3274,6 +3280,65 @@
 			-ms-filter: blur(2px);
 			filter: blur(2px);
 		}
+
+/* Naiscaper */
+#naiscaper .logo {
+	-moz-transition: opacity 2s ease, -moz-transform 1s ease;
+	-webkit-transition: opacity 2s ease, -webkit-transform 1s ease;
+	-ms-transition: opacity 2s ease, -ms-transform 1s ease;
+	transition: opacity 2s ease, transform 1s ease;
+	-moz-transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+	margin: 0 1em 1.3em 0;
+	display: inline-block;
+
+}
+
+#naiscaper .logo .icon {
+	border-radius: 100%;
+	border: solid 2px rgba(255, 255, 255, 0.125);
+	cursor: default;
+	display: inline-block;
+	font-size: 2em;
+	height: 2.25em;
+	line-height: 2.25em;
+	text-align: center;
+	width: 2.25em;
+	overflow: hidden;
+
+}
+#naiscaper .logo .icon > img {
+	position:absolute;
+	top:50%;
+	display:block;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+	width:80%;
+	height: auto;
+}
+.logo > a {
+	display: block;
+	text-align: center;
+}
+
+@media screen and (max-width: 736px) {
+
+	#naiscaper .logo {
+		margin: 0 0 1em 0;
+	}
+
+	#naiscaper .logo .icon {
+		font-size: 1.5em;
+	}
+
+	#naiscaper a {
+		font-size: 0.8em;
+	}
+
+}
 
 /* Wrapper */
 
@@ -3539,6 +3604,11 @@
 				-ms-flex: 1;
 			}
 
+			.wrapper.spotlight .logos {
+				width: 100%;
+				text-align: right;
+			}
+
 				.wrapper.spotlight .image img {
 					border-radius: 100%;
 					width: 100%;
@@ -3547,6 +3617,9 @@
 			.wrapper.spotlight .content {
 				width: 100%;
 				-ms-flex: 2;
+			}
+			.content.logo {
+				margin: 0 0 1.3em 0;
 			}
 
 			.wrapper.spotlight:nth-child(2n - 1) .inner {
